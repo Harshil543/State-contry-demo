@@ -17,6 +17,6 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.432);
   margin: 20px;
   outline: none;
-  -webkit-background-clip: text;
+  background-clip: text;
   color: rgba(255, 254, 254, 0.877);
 }
