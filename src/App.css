@@ -1,31 +1,9 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@import url("https://fonts.googleapis.com/css2?family=Ysabeau+Infant:wght@1;100;300&display=swap");
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +13,49 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+* {
+  font-family: "Ysabeau Infant", sans-serif;
+}
+
+button {
+  margin: 20px 0px;
+  border: 0.2em solid #64ccc5;
+  cursor: pointer;
+  outline: none;
+  font-size: 8px;
+  -webkit-transform: translate(0);
+  transform: translate(0);
+  padding: 0.8em 2em;
+  box-shadow: 1px 1px 10px #001c30;
+  -webkit-transition: box-shadow 0.25s;
+  transition: box-shadow 0.25s;
+  color: white;
+}
+
+button .text {
+  background-clip: text;
+  text-shadow: 2px 2px #000000c7;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background: #001c30;
+}
+
+button:hover {
+  box-shadow: 0 12px 24px #001c30;
+}
+
+.main {
+  margin-top: 10%;
 }

@@ -1,0 +1,22 @@
+.sidebar {
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: #176b87;
+  overflow-x: hidden;
+  color: white;
+  transition: all 0.3s ease;
+  text-shadow: 2px 2px #000000a1;
+}
+
+.CountryInput {
+  padding: 7px 11px;
+  width: 200px;
+  border-radius: 3px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.432);
+  margin: 20px;
+  outline: none;
+  -webkit-background-clip: text;
+  color: rgba(255, 254, 254, 0.877);
+}

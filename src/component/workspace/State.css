@@ -1,0 +1,32 @@
+.state {
+  background-color: #8fd4cd;
+  color: #4d4c4c;
+}
+
+.card {
+  border: 8px solid #176b87;
+  background-color: #0a3442;
+  text-shadow: 2px 2px #000000c7;
+  color: #ffffffe5;
+  border-radius: 0px;
+  padding: 10px;
+  box-shadow: 1px 1px 20px #001c30;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+input {
+  padding: 7px 11px;
+  width: 200px;
+  border-radius: 3px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.432);
+  margin: 20px;
+  outline: none;
+  -webkit-background-clip: text;
+  color: rgba(0, 0, 0, 0.877);
+}
+
+.card-text {
+  text-align: center;
+}
