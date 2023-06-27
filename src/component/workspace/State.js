@@ -23,6 +23,7 @@ function Child(props) {
 
   function handleRemove(index) {
     const updatedChild = [...props.data.child];
+    console.log(updatedChild);
     updatedChild.splice(index, 1);
     props.updateChild(updatedChild);
   }
@@ -98,12 +99,8 @@ function Child(props) {
                 <p className="card-text">
                   Districts: {child.district.map((district) => district)}
                 </p>
-                <button className="mx-2" onClick={() => handleRemove(index)}>
-                  Remove
-                </button>
-                <button className="mx-2" onClick={() => handleEdit(index)}>
-                  Edit
-                </button>
+                <button onClick={() => handleRemove(index)}>Remove</button>
+                <button onClick={() => handleEdit(index)}>Edit</button>
               </div>
             </div>
           </div>

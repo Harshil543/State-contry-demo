@@ -3,7 +3,23 @@ import "./CountryrComp.css";
 import State from "../State";
 
 function Workspace() {
-  const [countries, setCountries] = useState([]);
+  const [countries, setCountries] = useState([
+    {
+      country: "india",
+      child: [
+        {
+          state: "Gujarat",
+          population: "50",
+          district: ["Amreli"],
+        },
+      ],
+    },
+  ]);
+  const handleRemoveCountry = (index) => {
+    const updatedcontry = [...[countries[index]]];
+    updatedcontry.splice(index, 1);
+    console.log(updatedcontry);
+  };
 
   const [newCountry, setNewCountry] = useState("");
   const [showInputField, setShowInputField] = useState(false);
@@ -39,6 +55,7 @@ function Workspace() {
         {countries.map((country, index) => (
           <h3 className="m-3" key={index} onClick={() => handleClick(index)}>
             {country.country}
+            <button onClick={() => handleRemoveCountry(index)}>Remove</button>
           </h3>
         ))}
 
