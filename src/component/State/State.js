@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../State/State.css";
+import "./State.css";
 
 function Child(props) {
   const [state, setState] = useState("");
