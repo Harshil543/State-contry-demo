@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./State.css";
+import "../State/State.css";
 
 function Child(props) {
   const [state, setState] = useState("");
@@ -54,7 +54,7 @@ function Child(props) {
   }
 
   return (
-    <div className="state d-flex flex-column align-items-center col-10">
+    <div className="state d-flex flex-column align-items-center">
       <form onSubmit={editing ? handleUpdate : handleSubmit} className="">
         <div>
           <input
@@ -87,25 +87,29 @@ function Child(props) {
         </div>
       </form>
       <h1 className="mb-3">{props.data.country}</h1>
-      <div className="row" style={{ width: "1000px" }}>
-        {props.data.child.map((child, index) => (
-          <div className=" col-sm-5 m-3" key={index}>
-            <div className="card">
-              <div className="card-body">
-                <h5 className="card-title">{child.state || ""}</h5>
-                <p className="card-text">
-                  Population : {child.population || ""}
-                </p>
-                <p className="card-text">
-                  Districts: {child.district.map((district) => district)}
-                </p>
-                <button onClick={() => handleRemove(index)}>Remove</button>
-                <button onClick={() => handleEdit(index)}>Edit</button>
+      {props.data.child.length > 0 ? (
+        <div className="row" style={{ width: "1500px" }}>
+          {props.data.child.map((child, index) => (
+            <div className="col-4" key={index}>
+              <div className="card">
+                <div className="card-body">
+                  <h5 className="card-title">{child.state || ""}</h5>
+                  <p className="card-text">
+                    Population : {child.population || ""}
+                  </p>
+                  <p className="card-text">
+                    Districts: {child.district.map((district) => district)}
+                  </p>
+                  <button onClick={() => handleRemove(index)}>Remove</button>
+                  <button onClick={() => handleEdit(index)}>Edit</button>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      ) : (
+        <h1>No Data</h1>
+      )}
     </div>
   );
 }
